@@ -1,4 +1,4 @@
-name: Build and Deploy textcpp
+name: Build and Deploy Package
 
 on:
   push:
