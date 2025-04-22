@@ -221,3 +221,4 @@ cmake-build-debug
 /dataSources.local.xml
 .vscode/settings.json
 *.ipynb
+.vscode/

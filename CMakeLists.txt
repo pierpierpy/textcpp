@@ -10,5 +10,6 @@ add_executable(textcpp
         src/textcpp/text_utils/bindings_text_utils.cpp
         src/textcpp/text_utils/count_words.cpp
         src/textcpp/text_utils/frequency_count.cpp
+        src/textcpp/text_utils/word_frequency_count.cpp
         src/textcpp/others/bindings_others.cpp
 )

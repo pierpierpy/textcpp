@@ -9,6 +9,7 @@ ext_modules = [
             "src/textcpp/text_utils/bindings_text_utils.cpp",
             "src/textcpp/text_utils/count_words.cpp",
             "src/textcpp/text_utils/frequency_count.cpp",
+            "src/textcpp/text_utils/word_frequency_count.cpp",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
         language="c++",
@@ -19,6 +20,15 @@ ext_modules = [
             "src/textcpp/others/bindings_others.cpp",
             "src/textcpp/others/add.cpp",
             "src/textcpp/others/sub.cpp",
+        ],
+        include_dirs=[pybind11.get_include(), "src/textcpp"],
+        language="c++",
+    ),
+    Extension(
+        "textcpp.preprocessing",
+        [
+            "src/textcpp/preprocessing/bindings_preprocessing.cpp",
+            "src/textcpp/preprocessing/extract_ngrams.cpp",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
         language="c++",
