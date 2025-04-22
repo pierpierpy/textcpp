@@ -1,4 +1,4 @@
-#include "../operations.h"
+#include "operations.h"
 #include <iostream>
 #include <sstream>
 #include <fstream>

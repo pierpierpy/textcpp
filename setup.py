@@ -27,11 +27,12 @@ ext_modules = [
 
 setup(
     name='textcpp',
-    version='0.0.3',
-    author='Piergiorgio',
+    version='0.0.4',
+    author='PierPierPy',
     description='package utils for textual analysis in C++',
     packages=['textcpp'],
     package_dir={'': 'src'},
+    package_data={'textcpp': ['*.h']},
     ext_modules=ext_modules,
     cmdclass={'build_ext': build_ext},
     zip_safe=False,
