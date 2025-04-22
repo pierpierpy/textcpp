@@ -7,6 +7,7 @@ git push origin vX.X.X
 
 with the same version as the version in setup.py
 the pipeline will automatically create the tag, release and push it on PiPy
+git show-ref
 
 
 for local testing
