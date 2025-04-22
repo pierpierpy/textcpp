@@ -41,8 +41,9 @@ jobs:
           files: dist/*.tar.gz
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Publish to PyPI
+    - name: Publish to PyPI (only sdist)
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages: dist/*.tar.gz
