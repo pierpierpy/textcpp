@@ -27,7 +27,7 @@ ext_modules = [
 
 setup(
     name="textcpp",
-    version="0.0.5",
+    version="0.0.6",
     author="PierPierPy",
     description="package utils for textual analysis in C++",
     packages=["textcpp"],
