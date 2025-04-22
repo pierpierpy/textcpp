@@ -11,7 +11,7 @@ ext_modules = [
             "src/textcpp/text_utils/frequency_count.cpp",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
-        language='c++',
+        language="c++",
     ),
     Extension(
         "textcpp.others",
@@ -21,21 +21,21 @@ ext_modules = [
             "src/textcpp/others/sub.cpp",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
-        language='c++',
-    )
+        language="c++",
+    ),
 ]
 
 setup(
-    name='textcpp',
-    version='0.0.4',
-    author='PierPierPy',
-    description='package utils for textual analysis in C++',
-    packages=['textcpp'],
-    package_dir={'': 'src'},
-    package_data={'textcpp': ['*.h']},
+    name="textcpp",
+    version="0.0.5",
+    author="PierPierPy",
+    description="package utils for textual analysis in C++",
+    packages=["textcpp"],
+    package_dir={"": "src"},
+    package_data={"textcpp": ["*.h"]},
     ext_modules=ext_modules,
-    cmdclass={'build_ext': build_ext},
+    cmdclass={"build_ext": build_ext},
     zip_safe=False,
-    python_requires='>=3.7',
-    install_requires=['pybind11>=2.6'],
+    python_requires=">=3.7",
+    install_requires=["pybind11>=2.6"],
 )
