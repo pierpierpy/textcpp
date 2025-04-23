@@ -28,4 +28,6 @@ PYBIND11_MODULE(preprocessing, m) {
         py::arg("is_file") = false,
         "Extract n-grams from text or file using a tokenizer"
     );
+    m.def("remove_stopwords", &remove_stopwords,
+        "Remove stopwords from token list");
 }

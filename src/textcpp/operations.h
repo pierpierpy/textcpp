@@ -3,7 +3,9 @@
 
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include "preprocessing/tokenizer.h"
+#include "preprocessing/stopword_utils.h"
 
 // Forward declaration
 class SimpleTokenizer;
@@ -20,5 +22,7 @@ std::unordered_map<std::string, int> extract_ngrams(
     const Tokenizer& tokenizer, 
     bool is_file = false);
 
-
+std::vector<std::string> remove_stopwords(
+const std::vector<std::string>& tokens,
+const std::unordered_set<std::string>& stopwords);
 #endif
