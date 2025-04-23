@@ -37,15 +37,22 @@ the pipeline will automatically create the tag, release and push it on PiPy.
 remember to set the version to **vX.X.X-dev** in the **setup.py**
 ```bash
 >> rm -r build/
+>> rm -r src/textcpp.egg-info
 >> pip install . --force-reinstall
 ```
 
 
 ## COLAB
 
-module:
+### create a new *MODULE*:
 - create the folder in **src/textcpp**, call it XXX
 - create inside the module a ***bindings_XXX.cpp***
+- create the .cpp files with the functions and add the functions inside the ***bindings_XXX.cpp***
+- place the function typings in the operations.h
+- add the Extension to the **setup.py**
+- add the new module to **__ init__.py** to make it visible to IntelliSense
+
+### create a new *FUNCTION*:
 - create the .cpp files with the functions and add the functions inside the ***bindings_XXX.cpp***
 - place the function typings in the operations.h
 - add the Extension to the **setup.py**
