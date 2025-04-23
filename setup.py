@@ -29,6 +29,7 @@ ext_modules = [
         [
             "src/textcpp/preprocessing/bindings_preprocessing.cpp",
             "src/textcpp/preprocessing/extract_ngrams.cpp",
+            "src/textcpp/preprocessing/tokenizer.h",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
         language="c++",
@@ -37,7 +38,7 @@ ext_modules = [
 
 setup(
     name="textcpp",
-    version="0.0.8-dev",
+    version="0.0.9",
     author="PierPierPy",
     description="package utils for textual analysis in C++",
     packages=["textcpp"],
