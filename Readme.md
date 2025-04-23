@@ -1,5 +1,11 @@
+<p align="center">
+  <strong>
+    <h1>TEXTCPP</h1>  </strong>
+    Python package for high-performance textual analysis,  
+     Python's simplicity with C++ speed and efficiency.
 
-# Python package with utils in C++ for textual analysis
+</p>
+
 <p align="center">
   <img src="logo.png" alt="TextCpp Logo" width="360"/>
 </p>
