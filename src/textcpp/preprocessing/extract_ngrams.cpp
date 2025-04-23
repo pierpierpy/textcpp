@@ -7,8 +7,6 @@
 #include "tokenizer.h"
 
 
-
-
 std::unordered_map<std::string, int> extract_ngrams(
     const std::string& input, 
     int n, 

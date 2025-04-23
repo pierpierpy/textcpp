@@ -1,27 +1,46 @@
+
 # Python package with utils in C++ for textual analysis
+<p align="center">
+  <img src="logo.png" alt="TextCpp Logo" width="360"/>
+</p>
 
-## BUILD & TAG
+## USAGE
+install using:
+```bash
+pip install textcpp
+```
+usage in ***Python***:
+```python
+import textcpp as tcpp
+help(tcpp.text_utils.frequency_count)
+text_count = tcpp.text_utils.frequency_count("shakespeare.txt")
+regex = tcpp.preprocessing.RegexTokenizer(r"\W+")
+regex.tokenize("ciao ciao")
+```
+## BUILD & PUSH
 to build and push on PiPy just create a new tag
-- git tag -d vX.X.X [to delete tags]
-- git tag vX.X.X
-- git push origin vX.X.X
-
+```bash
+>> git tag -d vX.X.X [to delete tags]
+>> git tag vX.X.X
+>> git push origin vX.X.X
+```
 with the same version as the version in setup.py
 the pipeline will automatically create the tag, release and push it on PiPy.
 
 **remember to allign the version of the release on github with the version in the setup.py file.**
+```bash
+>> git show-ref
+```
 
-- git show-ref
+## Local Testing
+remember to set the version to **vX.X.X-dev** in the **setup.py**
+```bash
+>> rm -r build/
+>> pip install . --force-reinstall
+```
 
 
-## For local testing
-
-- rm -r build/
-- pip install . --force-reinstall
-
-
-
-## how to create a new function or module
+## COLAB
 
 module:
 - create the folder in **src/textcpp**, call it XXX
