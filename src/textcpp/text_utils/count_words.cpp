@@ -5,26 +5,37 @@
 
 using namespace std;
 
-int count_words(string path) {
-    ifstream MyReadFile(path);
-    if (!MyReadFile) {
-        cerr << "Error opening file: " << path << endl;
-        return -1;  // error indicator
-    }
+int count_words(const string& input) {
+    ifstream MyReadFile(input);
 
-    string line, word;
-    int word_count = 0;
+    if (MyReadFile) {
+        // Input is a valid file path
+        string line, word;
+        int word_count = 0;
 
-    while (getline(MyReadFile, line)) {
-        stringstream ss(line);
+        while (getline(MyReadFile, line)) {
+            stringstream ss(line);
+            while (ss >> word) {
+                word_count++;
+            }
+        }
+
+        MyReadFile.close();
+        return word_count;
+    } else {
+        // Input is not a file, treat as raw string
+        stringstream ss(input);
+        string word;
+        int word_count = 0;
+
         while (ss >> word) {
             word_count++;
         }
-    }
 
-    MyReadFile.close();
-    return word_count;
+        return word_count;
+    }
 }
+
 
 
 // g++ src/mypackage/count_words.cpp -o test/count_words_test
