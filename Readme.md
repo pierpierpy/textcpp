@@ -16,7 +16,8 @@ the pipeline will automatically create the tag, release and push it on PiPy.
 
 ## For local testing
 
-pip install . --force-reinstall
+- rm -r build/
+- pip install . --force-reinstall
 
 
 

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <unordered_map>
+#include "preprocessing/tokenizer.h"
 
 // Forward declaration
 class SimpleTokenizer;
@@ -16,7 +17,8 @@ int  word_frequency_count(const std::string& path, std::string word);
 std::unordered_map<std::string, int> extract_ngrams(
     const std::string& input, 
     int n, 
-    const SimpleTokenizer& tokenizer, 
+    const Tokenizer& tokenizer, 
     bool is_file = false);
+
 
 #endif

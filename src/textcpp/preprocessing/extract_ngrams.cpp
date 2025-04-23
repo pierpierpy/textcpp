@@ -4,26 +4,15 @@
 #include <string>
 #include <unordered_map>
 #include <stdexcept>
+#include "tokenizer.h"
 
-class SimpleTokenizer {
-    public:
-        std::vector<std::string> tokenize(const std::string& text) const {
-            std::vector<std::string> tokens;
-            std::istringstream stream(text);
-            std::string token;
-            while (stream >> token) {
-                tokens.push_back(token);
-            }
-            return tokens;
-        }
-    };
 
 
 
 std::unordered_map<std::string, int> extract_ngrams(
     const std::string& input, 
     int n, 
-    const SimpleTokenizer& tokenizer, 
+    const Tokenizer& tokenizer, 
     bool is_file = false) 
 {
     std::string text;
