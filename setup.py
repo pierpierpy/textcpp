@@ -29,7 +29,6 @@ ext_modules = [
         [
             "src/textcpp/preprocessing/bindings_preprocessing.cpp",
             "src/textcpp/preprocessing/extract_ngrams.cpp",
-            "src/textcpp/preprocessing/tokenizer.h",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
         language="c++",
