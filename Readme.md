@@ -7,7 +7,7 @@
 ## USAGE
 install using:
 ```bash
-pip install textcpp
+>> pip install textcpp
 ```
 usage in ***Python***:
 ```python
@@ -16,6 +16,7 @@ help(tcpp.text_utils.frequency_count)
 text_count = tcpp.text_utils.frequency_count("shakespeare.txt")
 regex = tcpp.preprocessing.RegexTokenizer(r"\W+")
 regex.tokenize("ciao ciao")
+n_grams_regex = tcpp.preprocessing.extract_ngrams("shakespeare.txt",100,regex, is_file = True )
 ```
 ## BUILD & PUSH
 to build and push on PiPy just create a new tag
