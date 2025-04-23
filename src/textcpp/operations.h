@@ -7,8 +7,6 @@
 #include "preprocessing/tokenizer.h"
 #include "preprocessing/stopword_utils.h"
 
-// Forward declaration
-class SimpleTokenizer;
 
 int add(int a, int b);
 int sub(int a, int b);

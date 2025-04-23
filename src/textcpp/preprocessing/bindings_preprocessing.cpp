@@ -12,10 +12,16 @@ PYBIND11_MODULE(preprocessing, m) {
         .def("tokenize", &Tokenizer::tokenize);
 
     py::class_<SimpleTokenizer, Tokenizer>(m, "SimpleTokenizer")
-        .def(py::init<>());
+        .def(py::init<>())  // No stopwords
+        .def(py::init<const std::unordered_set<std::string>&>())
+        .def("tokenize", &SimpleTokenizer::tokenize);
 
+    // RegexTokenizer binding with regex + optional stopwords
     py::class_<RegexTokenizer, Tokenizer>(m, "RegexTokenizer")
-        .def(py::init<const std::string&>());
+        .def(py::init<const std::string&>())  // Only regex
+        .def(py::init<const std::string&, const std::unordered_set<std::string>&>())  // Regex + stopwords
+        .def("tokenize", &RegexTokenizer::tokenize);
+
 
     // Use lambda for proper polymorphic binding
     m.def("extract_ngrams", 
