@@ -25,15 +25,18 @@ PYBIND11_MODULE(preprocessing, m) {
 
     // Use lambda for proper polymorphic binding
     m.def("extract_ngrams", 
-        [](const std::string& input, int n, const Tokenizer& tokenizer, bool is_file) {
-            return extract_ngrams(input, n, tokenizer, is_file);
+        [](const std::string& input, int n, const Tokenizer& tokenizer, bool is_file,bool normalize) {
+            return extract_ngrams(input, n, tokenizer, is_file,normalize);
         },
         py::arg("input"), 
         py::arg("n"), 
         py::arg("tokenizer"), 
         py::arg("is_file") = false,
+        py::arg("normalize") = false,
         "Extract n-grams from text or file using a tokenizer"
     );
     m.def("remove_stopwords", &remove_stopwords,
         "Remove stopwords from token list");
+    m.def("normalize_text", &normalize_text, "Normalize text (lowercase, remove punctuation, extra whitespace)");
+
 }

@@ -5,13 +5,14 @@
 #include <unordered_map>
 #include <stdexcept>
 #include "tokenizer.h"
-
+#include "normalize.h"
 
 std::unordered_map<std::string, int> extract_ngrams(
     const std::string& input, 
     int n, 
     const Tokenizer& tokenizer, 
-    bool is_file = false) 
+    bool is_file = false,
+bool normalize = false) 
 {
     std::string text;
 
@@ -28,7 +29,9 @@ std::unordered_map<std::string, int> extract_ngrams(
     } else {
         text = input;
     }
-
+    if (normalize){
+        text = normalize_text(text);
+    }
     std::vector<std::string> tokens = tokenizer.tokenize(text);
     std::unordered_map<std::string, int> ngram_counts;
 

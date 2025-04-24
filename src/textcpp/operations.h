@@ -18,9 +18,11 @@ std::unordered_map<std::string, int> extract_ngrams(
     const std::string& input, 
     int n, 
     const Tokenizer& tokenizer, 
-    bool is_file = false);
+    bool is_file = false,
+    bool normalize = false);
 
 std::vector<std::string> remove_stopwords(
 const std::vector<std::string>& tokens,
 const std::unordered_set<std::string>& stopwords);
+std::string normalize_text(const std::string& text);
 #endif

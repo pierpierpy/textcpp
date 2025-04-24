@@ -8,6 +8,7 @@
 #include <unordered_set>
 #include <algorithm>
 #include <cctype>
+#include "stopword_utils.h"
 
 class Tokenizer {
 public:
@@ -31,13 +32,14 @@ public:
         std::vector<std::string> tokens;
         std::istringstream stream(text);
         std::string token;
-
+        
         while (stream >> token) {
-            if (stopwords.empty() || stopwords.find(token) == stopwords.end()) {
+            
                 tokens.push_back(token);
-            }
+            
         }
-        return tokens;
+        
+        return remove_stopwords(tokens, stopwords);
     }
 };
 
@@ -63,11 +65,9 @@ public:
 
         for (auto it = words_begin; it != words_end; ++it) {
             std::string token = it->str();
-            if (stopwords.empty() || stopwords.find(token) == stopwords.end()) {
                 tokens.push_back(token);
-            }
         }
-        return tokens;
+        return remove_stopwords(tokens, stopwords);
     }
 };
 
