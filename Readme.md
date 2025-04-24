@@ -61,5 +61,5 @@ remember to set the version to **vX.X.X-dev** in the **setup.py**
 ### create a new *FUNCTION*:
 - create the .cpp files with the functions and add the functions inside the ***bindings_XXX.cpp***
 - place the function typings in the operations.h
-- add the Extension to the **setup.py**
+- add new .cpp files to Extension to the **setup.py**
 - add the new module to **__ init__.py** to make it visible to IntelliSense
