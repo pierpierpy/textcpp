@@ -25,4 +25,5 @@ std::vector<std::string> remove_stopwords(
 const std::vector<std::string>& tokens,
 const std::unordered_set<std::string>& stopwords);
 std::string normalize_text(const std::string& text);
+std::string read_text(const std::string& file_path);
 #endif

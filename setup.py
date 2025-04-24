@@ -10,6 +10,7 @@ ext_modules = [
             "src/textcpp/text_utils/count_words.cpp",
             "src/textcpp/text_utils/frequency_count.cpp",
             "src/textcpp/text_utils/word_frequency_count.cpp",
+            "src/textcpp/text_utils/read.cpp",
         ],
         include_dirs=[pybind11.get_include(), "src/textcpp"],
         language="c++",

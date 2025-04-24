@@ -12,7 +12,7 @@ std::unordered_map<std::string, int> extract_ngrams(
     int n, 
     const Tokenizer& tokenizer, 
     bool is_file = false,
-bool normalize = false) 
+    bool normalize = false) 
 {
     std::string text;
 

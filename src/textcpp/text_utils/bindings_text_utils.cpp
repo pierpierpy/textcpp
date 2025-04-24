@@ -8,5 +8,8 @@ PYBIND11_MODULE(text_utils, m) {
     m.doc() = "Module with multiple C++ functions";
     m.def("count_words", &count_words, "count words in text file");
     m.def("frequency_count", &frequency_count, "make frequency word count from file");
-    m.def("word_frequency_count", &word_frequency_count, "Counts how many times a word appears in a text file.");}
+    m.def("word_frequency_count", &word_frequency_count, "Counts how many times a word appears in a text file.");
+    m.def("read_text", &read_text, "read_text");
+
+}
 

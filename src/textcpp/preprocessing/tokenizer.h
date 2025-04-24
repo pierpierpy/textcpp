@@ -65,10 +65,11 @@ public:
 
         for (auto it = words_begin; it != words_end; ++it) {
             std::string token = it->str();
+             // TODO 1 maybe here it is better to check here if the word is inside the stopwords list instead of filtering later
                 tokens.push_back(token);
         }
-        return remove_stopwords(tokens, stopwords);
+        return remove_stopwords(tokens, stopwords); // TODO check TODO 1
     }
 };
 
-#endif  // TOKENIZER_H
+#endif  
