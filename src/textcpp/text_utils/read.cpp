@@ -32,3 +32,6 @@ const std::string& Text::get_content() {
 const std::string& Text::get_file_path() const {
     return file_path;
 }
+
+// ChunkReader constructor and methods
+// (This is already declared in the header)
